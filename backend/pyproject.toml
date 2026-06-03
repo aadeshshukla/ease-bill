@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pylint.main]
+py-version = "3.11"
+ignore = ["venv", ".venv"]
+
+[tool.pylint.format]
+max-line-length = 88
